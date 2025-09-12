@@ -6,7 +6,7 @@ import { Footer } from "./_components/footer";
 import { ThemeProvider } from "./_components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "",
+  title: "Tristan Jockel",
   description: "",
   // icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${space_grotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-screen flex-col justify-between gap-2 bg-background text-text selection:bg-[#a4a2efb3]">
+      <body className="flex min-h-screen flex-col justify-between gap-2 bg-background text-text selection:bg-text selection:text-background">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
