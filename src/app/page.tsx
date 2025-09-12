@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <>
-      <div className="mt-[30vh] mb-[12vh] flex items-center justify-center">
+      <div className="mt-[15vh] mb-[12vh] flex items-center justify-center">
         <div>
           <h1 className="mb-0.5 text-right text-4xl">Tristan Jockel</h1>
           <span className="mr-4 text-current/60">he/him</span>
