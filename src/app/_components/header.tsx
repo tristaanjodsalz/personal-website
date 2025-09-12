@@ -5,7 +5,7 @@ export function Header() {
   return (
     <div className="p-6 px-[max(calc(50vw-29rem),4rem)] text-text/95">
       <Link href={"/"}>Tristan Jockel</Link>
-      <ul className="float-right flex list-none gap-6 p-0">
+      <ul className="float-right hidden list-none gap-6 p-0 sm:flex">
         <li>
           <Link href={"/about"}>About</Link>
         </li>

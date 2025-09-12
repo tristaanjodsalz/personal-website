@@ -4,15 +4,17 @@ export default function HomePage() {
   return (
     <>
       <div className="mt-[15vh] mb-[12vh] flex items-center justify-center">
-        <div>
+        <div className="ml-4 text-right">
           <h1 className="mb-0.5 text-right text-4xl">Tristan Jockel</h1>
-          <span className="mr-4 text-current/60">he/him</span>
-          <span className="text-current/60">European Union</span>
+          <div className="hidden text-current/60 sm:block">
+            <span className="mr-4">he/him</span>
+            <span>European Union</span>
+          </div>
         </div>
         <span className="m-6 h-32 w-[1px] bg-[#63636340] dark:bg-[#63636380]" />
         <Image
           src={"/image.png"}
-          className="h-32 w-32 rounded-full object-cover"
+          className="mr-6 h-32 w-32 rounded-full object-cover"
           alt="Picture of Tristan Jockel"
           width={256}
           height={128}
