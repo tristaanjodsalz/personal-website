@@ -7,4 +7,8 @@
   --font-mono:
     var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas;
+
+  --color-text: #e0e0f0;
+  --color-background: #05050a;
+  --color-background-light: #0e0e15;
 }

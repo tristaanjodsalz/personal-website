@@ -31,14 +31,14 @@ export default function RootLayout({
       className={`${space_grotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body>
+      <body className="flex min-h-screen flex-col justify-between gap-2 bg-background text-text">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div>{children}</div>
         </ThemeProvider>
         <Footer />
       </body>
