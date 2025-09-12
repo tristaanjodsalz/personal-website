@@ -1,9 +1,9 @@
 import "tristanjockel/styles/globals.css";
 
 import type { Metadata } from "next";
-import { JetBrains_Mono, Roboto, Space_Mono } from "next/font/google";
-import { ThemeProvider } from "./_components/theme-provider";
+import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Footer } from "./_components/footer";
+import { ThemeProvider } from "./_components/theme-provider";
 
 export const metadata: Metadata = {
   title: "",
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   // icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const roboto = Roboto({
+const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-space_grotesk",
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${jetbrainsMono.variable}`}
+      className={`${space_grotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <body>
