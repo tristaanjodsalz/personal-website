@@ -3,8 +3,12 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <>
-      <div className="flex h-[75vh] items-center justify-center">
-        <h1 className="text-right text-4xl">Tristan Jockel</h1>
+      <div className="mt-[30vh] mb-[12vh] flex items-center justify-center">
+        <div>
+          <h1 className="mb-0.5 text-right text-4xl">Tristan Jockel</h1>
+          <span className="mr-4 text-current/60">he/him</span>
+          <span className="text-current/60">European Union</span>
+        </div>
         <span className="m-6 h-32 w-[1px] bg-[#63636340] dark:bg-[#63636380]" />
         <Image
           src={"/image.png"}
@@ -15,7 +19,7 @@ export default function HomePage() {
           objectFit="cover"
         />
       </div>
-      <main className="flex w-screen justify-center">
+      <main className="my-[5vh] flex w-screen justify-center">
         <div>
           <p className="max-w-4xl p-4">
             Hi, I'm Tristan! Lorem ipsum dolor sit amet consectetur adipisicing
@@ -28,4 +32,3 @@ export default function HomePage() {
     </>
   );
 }
-1;

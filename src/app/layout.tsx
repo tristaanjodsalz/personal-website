@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${space_grotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-screen flex-col justify-between gap-2 bg-background text-text">
+      <body className="flex min-h-screen flex-col justify-between gap-2 bg-background text-text selection:bg-[#a4a2efb3]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
