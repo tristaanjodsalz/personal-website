@@ -1,8 +1,8 @@
 export function Footer() {
   return (
-    <div className="flex justify-center w-screen bg-neutral-900">
+    <div className="flex w-screen justify-center bg-neutral-900">
       <div className="w-4xl p-4">
-        <p className="text-neutral-400 font-mono">Build by Tristan Jockel :D</p>
+        <p className="font-mono text-neutral-400">Build by Tristan Jockel :D</p>
       </div>
     </div>
   );
