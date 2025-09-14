@@ -25,7 +25,7 @@ export default function HomePage() {
           priority
         />
       </div>
-      <div className="my-[5vh] flex w-screen flex-col justify-center px-[max(calc(50vw-29rem),1rem)] sm:flex-row">
+      <div className="flex flex-col justify-center sm:flex-row">
         <main>
           <p>
             Hi, I'm Tristan! Lorem ipsum dolor sit amet consectetur adipisicing

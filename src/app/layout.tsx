@@ -41,7 +41,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <div className="mt-4 w-screen px-[max(calc(50vw-29rem),1rem)]">
+              {children}
+            </div>
           </ThemeProvider>
         </div>
         <Footer />
