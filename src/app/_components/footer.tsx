@@ -1,10 +1,10 @@
 export function Footer() {
   return (
-    <div className="flex w-screen flex-row justify-between gap-8 bg-background-light p-4 px-[max(calc(50vw-29rem),4rem)] text-neutral-400">
+    <div className="flex w-screen flex-col justify-between gap-8 bg-background-light p-4 px-[max(calc(50vw-29rem),1rem)] text-neutral-400 sm:flex-row">
       <div>
         <p>Build by Tristan Jockel :D</p>
       </div>
-      <div className="text-right">
+      <div className="sm:text-right">
         <p>
           Source available on{" "}
           <a

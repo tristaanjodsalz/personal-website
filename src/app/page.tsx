@@ -1,3 +1,4 @@
+import { MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -7,8 +8,11 @@ export default function HomePage() {
         <div className="ml-4 text-right">
           <h1 className="mb-0.5 text-right text-4xl">Tristan Jockel</h1>
           <div className="hidden text-current/60 sm:block">
-            <span className="mr-4">he/him</span>
-            <span>European Union</span>
+            <span className="mr-4">
+              <MapPin className="mr-[-0.4rem] mb-1 inline h-[0.8em]" /> European
+              Union
+            </span>
+            <span>he/him</span>
           </div>
         </div>
         <span className="m-6 h-32 w-[1px] bg-[#63636340] dark:bg-[#63636380]" />
@@ -18,19 +22,19 @@ export default function HomePage() {
           alt="Picture of Tristan Jockel"
           width={256}
           height={128}
-          objectFit="cover"
+          priority
         />
       </div>
-      <main className="my-[5vh] flex w-screen justify-center">
-        <div>
-          <p className="max-w-4xl p-4">
+      <div className="my-[5vh] flex w-screen flex-col justify-center px-[max(calc(50vw-29rem),1rem)] sm:flex-row">
+        <main>
+          <p>
             Hi, I'm Tristan! Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Natus dolore quibusdam, exercitationem nulla sit et vero
             officiis, alias quis iure quisquam saepe voluptates ipsa, in fuga
             laboriosam! Nam, tempora aut.
           </p>
-        </div>
-      </main>
+        </main>
+      </div>
     </>
   );
 }
