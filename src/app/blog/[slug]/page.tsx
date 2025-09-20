@@ -43,7 +43,7 @@ export default async function BlogPostPage({
             {new Date(meta.date).toLocaleDateString()}
           </p>
 
-          <h1 className="font-bold text-3xl">{meta.title}</h1>
+          <h1 className="font-bold text-4xl">{meta.title}</h1>
 
           {meta.description ? (
             <p className="text-current/80">{meta.description}</p>

@@ -4,7 +4,9 @@ import Link from "next/link";
 export function Header() {
   return (
     <div className="p-6 px-[max(calc(50vw-29rem),1rem)] text-text/95">
-      <Link href={"/"}>Tristan Jockel</Link>
+      <Link href={"/"} className="font-medium">
+        Tristan Jockel
+      </Link>
       <ul className="float-right hidden list-none gap-6 p-0 sm:flex">
         <li>
           <Link href={"/blog"}>Blog</Link>
