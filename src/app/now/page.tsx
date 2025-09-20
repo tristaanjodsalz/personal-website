@@ -32,19 +32,19 @@ export default async function NowPage() {
             Software Modem
           </Link>{" "}
           is a Rust implementation of an OFDM modulator and demodulator. I am
-          planning on building a phased array tranciver to transmit and receive
-          data with help of this library.
+          planning on building a phased array transceiver to transmit and
+          receive data with the help of this library.
         </Text>
 
         <H3>Archivum</H3>
         <Text>
           <Link href="https://github.com/archivum-drive">Archivum Drive</Link>{" "}
           will be a selfhosted, end-to-end encrypted cloud storage solution. It
-          uses CRDTs to sync end to end encrypted metadata between clients and
+          uses CRDTs to sync end-to-end encrypted metadata between clients and
           stores files fully encrypted on a server.
         </Text>
         <Text>
-          I have plans to add server side indexing capabilities with projects
+          I have plans to add server-side indexing capabilities with projects
           like Confidential Containers to allow fully private search.
         </Text>
 
@@ -52,19 +52,19 @@ export default async function NowPage() {
 
         <H3 className="!tracking-normal">AS207792</H3>
         <Text>
-          After reading a lot about BGP, routing in general and hobbynets I
-          decided to get my own ASN. With the help of iFog i registerd{" "}
+          After reading a lot about BGP, routing in general and hobbynets, I
+          decided to get my own ASN. With the help of iFog, I registered{" "}
           <Link href="https://www.peeringdb.com/net/39427">AS207792</Link> and
           got a /46 IPv6 allocation.
           <br />
-          With two VPSes (one in Amsterdam and one in Düsseldorf) running bird2
-          I connect to my Upstreams iFog (AS34927) and First Root (AS41108).
+          With two VPSes (one in Amsterdam and one in Düsseldorf) running bird2,
+          I connect to my upstreams iFog (AS34927) and First Root (AS41108).
           <br />
           Also I have a port at{" "}
           <Link href="https://fogixp.org/">FogIXP Europe</Link>.
         </Text>
         <Text>
-          The VPS in Düsseldorf also runs a private VPN server for my devices to
+          The VPS in Düsseldorf runs a private VPN server for my devices to
           connect to.
         </Text>
       </article>

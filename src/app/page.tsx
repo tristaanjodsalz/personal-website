@@ -42,22 +42,22 @@ function Main() {
         I am a student from Germany interested in software development,
         networking and natural sciences.
         <br />
-        In my free time I like to code web apps, adminiseter servers, a
-        kubernetes cluster, AS207792, my autonomous system, and, of course,
+        In my free time I like to code web apps, administer servers, a
+        Kubernetes cluster, AS207792, my autonomous system, and, of course,
         spend time with my friends.
         <br />
         Feel free to check out my <Link href="/now">/now</Link> page to see what
-        I am doing curently and also check out my <Link href="/blog">blog</Link>
-        .
+        I am doing currently and also check out my{" "}
+        <Link href="/blog">blog</Link>.
       </Text>
       <Text>
-        Besites the the <span className="italic">nerd</span> stuff I also
-        somethimes watch Formula 1 and lissten to{" "}
+        Besides the the <span className="italic">nerd</span> stuff, I also
+        sometimes watch Formula 1 and listen to{" "}
         <Link href="https://music.apple.com/de/album/hamilton-an-american-musical-original-broadway-cast/1025210938">
           Hamilton
         </Link>
-        . I have a friend who has a big obsession with this musical and after I
-        watched it the first time I am also a big fan.
+        . I have a friend who has a big obsession with this musical, and since I
+        watched it the first time, I also have become a big fan.
       </Text>
     </main>
   );
