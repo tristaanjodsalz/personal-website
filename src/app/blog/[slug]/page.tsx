@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import {
+  TextExtraMuted,
+  TextMuted,
+  Title,
+} from "tristanjockel/components/text";
 import { getAllPostsMeta, getPostBySlug } from "tristanjockel/lib/posts";
 
 export async function generateStaticParams() {
@@ -39,15 +44,13 @@ export default async function BlogPostPage({
     <main>
       <article>
         <header className="mb-8">
-          <p className="text-current/60 text-sm">
+          <Title>{meta.title}</Title>
+
+          {meta.description ? <TextMuted>{meta.description}</TextMuted> : null}
+
+          <TextExtraMuted className="italic">
             {new Date(meta.date).toLocaleDateString()}
-          </p>
-
-          <h1 className="font-bold text-4xl">{meta.title}</h1>
-
-          {meta.description ? (
-            <p className="text-current/80">{meta.description}</p>
-          ) : null}
+          </TextExtraMuted>
         </header>
         <Component />
       </article>

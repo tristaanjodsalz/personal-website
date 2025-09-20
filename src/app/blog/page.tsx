@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { Title } from "tristanjockel/components/text";
 import { getAllPostsMeta } from "tristanjockel/lib/posts";
 
 export default async function BlogDashboardPage() {
   const posts = await getAllPostsMeta();
   return (
     <main>
-      <h1 className="mb-4 text-2xl">My Blog Posts</h1>
+      <Title className="mb-4">My Blog Posts</Title>
       <ol>
         {posts.map((p) => (
           <li key={p.slug}>

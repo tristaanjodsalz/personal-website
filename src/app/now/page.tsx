@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "tristanjockel/components/link";
+import { H2, H3, Text, Title } from "tristanjockel/components/text";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,54 +14,44 @@ export default async function NowPage() {
     <main>
       <article>
         <header className="mb-6">
-          <h1 className="font-bold text-4xl">What I am working on</h1>
-          <p className="mb-2 text-current/60 italic">
+          <Title>What I am working on</Title>
+          <Text className="text-current/60 italic">
             Last updated: {new Date("2025-09-20").toLocaleDateString()}
-          </p>
+          </Text>
         </header>
-        <p className="mb-2">
+        <Text>
           This page lists projects and things I am working on and ideas of
           projects I would like to do.
-        </p>
+        </Text>
 
-        <h2 className="mt-8 border-b border-b-current/20 pb-2 font-semibold text-3xl tracking-tight">
-          Software Projects:
-        </h2>
+        <H2>Software Projects:</H2>
 
-        <h3 className="mt-4 scroll-m-20 font-semibold text-2xl tracking-tight">
-          Software Modem
-        </h3>
-        <p className="mb-2">
+        <H3>Software Modem</H3>
+        <Text>
           <Link href="https://github.com/Minecrafter5K/software-modem">
             Software Modem
           </Link>{" "}
           is a Rust implementation of an OFDM modulator and demodulator. I am
           planning on building a phased array tranciver to transmit and receive
           data with help of this library.
-        </p>
+        </Text>
 
-        <h3 className="mt-4 scroll-m-20 font-semibold text-2xl tracking-tight">
-          Archivum
-        </h3>
-        <p className="mb-2">
+        <H3>Archivum</H3>
+        <Text>
           <Link href="https://github.com/archivum-drive">Archivum Drive</Link>{" "}
           will be a selfhosted, end-to-end encrypted cloud storage solution. It
           uses CRDTs to sync end to end encrypted metadata between clients and
           stores files fully encrypted on a server.
-        </p>
-        <p className="mb-2">
+        </Text>
+        <Text>
           I have plans to add server side indexing capabilities with projects
           like Confidential Containers to allow fully private search.
-        </p>
+        </Text>
 
-        <h2 className="mt-8 scroll-m-20 border-b border-b-current/20 pb-2 font-semibold text-3xl tracking-tight">
-          Other Projects:
-        </h2>
+        <H2>Other Projects:</H2>
 
-        <h3 className="mt-4 scroll-m-20 font-semibold text-2xl tracking-normal">
-          AS207792
-        </h3>
-        <p className="mb-2">
+        <H3 className="!tracking-normal">AS207792</H3>
+        <Text>
           After reading a lot about BGP, routing in general and hobbynets I
           decided to get my own ASN. With the help of iFog i registerd{" "}
           <Link href="https://www.peeringdb.com/net/39427">AS207792</Link> and
@@ -71,11 +62,11 @@ export default async function NowPage() {
           <br />
           Also I have a port at{" "}
           <Link href="https://fogixp.org/">FogIXP Europe</Link>.
-        </p>
-        <p className="mb-1">
+        </Text>
+        <Text>
           The VPS in Düsseldorf also runs a private VPN server for my devices to
           connect to.
-        </p>
+        </Text>
       </article>
     </main>
   );
