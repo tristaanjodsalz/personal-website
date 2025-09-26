@@ -1,29 +1,135 @@
-import { ExternalLink } from "lucide-react";
+"use client";
+
+import { MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+
+const navItems = [
+  { href: "/blog", label: "Blog" },
+  { href: "/now", label: "Projects (/now)" },
+  { href: "/stuff", label: "Random Stuff" },
+];
 
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const { body } = document;
+
+    if (isMenuOpen) {
+      body.classList.add("overflow-hidden");
+    } else {
+      body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      body.classList.remove("overflow-hidden");
+    };
+  }, [isMenuOpen]);
+
+  const navLinks = useMemo(
+    () =>
+      navItems.map(({ href, label }) => (
+        <li key={href}>
+          <Link
+            href={href}
+            className="transition-colors duration-150 hover:text-text/75 focus:text-text/75"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {label}
+          </Link>
+        </li>
+      )),
+    [],
+  );
+
   return (
-    <div className="p-6 px-[max(calc(50vw-29rem),1rem)] text-text/95">
-      <Link href={"/"} className="font-medium">
+    <>
+      <MainHeader
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        navLinks={navLinks}
+      />
+
+      {isMenuOpen ? (
+        <div
+          role="dialog"
+          aria-modal="true"
+          tabIndex={-1}
+          className="fixed inset-0 z-20 flex flex-col bg-background/50 backdrop-blur-lg backdrop-grayscale-25"
+          onClick={() => setIsMenuOpen(false)}
+          onKeyDown={(event) => {
+            if (
+              event.key === "Escape" ||
+              event.key === "Enter" ||
+              event.key === " "
+            ) {
+              event.preventDefault();
+              setIsMenuOpen(false);
+            }
+          }}
+        >
+          <MainHeader
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
+            navLinks={navLinks}
+          />
+          <nav className="flex flex-col items-center gap-6 pt-10 font-semibold text-2xl text-text">
+            <ul
+              className="flex w-full flex-col items-center gap-6"
+              onClick={(event) => event.stopPropagation()}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  event.stopPropagation();
+                  setIsMenuOpen(false);
+                } else {
+                  event.stopPropagation();
+                }
+              }}
+            >
+              {navLinks}
+            </ul>
+          </nav>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+function MainHeader({
+  isMenuOpen,
+  setIsMenuOpen,
+  navLinks,
+}: {
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  navLinks: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-center justify-between p-6 px-[max(calc(50vw-29rem),1rem)] text-text/95">
+      <Link href="/" className="font-medium">
         Tristan Jockel
       </Link>
-      <ul className="float-right hidden list-none gap-6 p-0 sm:flex">
-        <li>
-          <Link href={"/blog"}>Blog</Link>
-        </li>
-        <li>
-          <Link href={"/now"}>Projects (/now)</Link>
-        </li>
-        <li>
-          <Link href={"/stuff"}>Random Stuff</Link>
-        </li>
-        <li>
-          <a href="https://cheatsheet.miniwar.de/">
-            Cheatsheet{" "}
-            <ExternalLink className="mb-0.5 ml-[-0.3rem] inline h-[0.8em] text-current/50" />
-          </a>
-        </li>
-      </ul>
+
+      <nav className="hidden sm:block">
+        <ul className="flex list-none gap-6 p-0 font-medium text-sm">
+          {navLinks}
+        </ul>
+      </nav>
+
+      <button
+        className="sm:hidden"
+        aria-expanded={isMenuOpen}
+        aria-label={isMenuOpen ? "Navigation schließen" : "Navigation öffnen"}
+        type="button"
+        onClick={() => setIsMenuOpen((open) => !open)}
+      >
+        {isMenuOpen ? (
+          <XIcon className="h-6 text-text/95" />
+        ) : (
+          <MenuIcon className="h-6 text-text/95" />
+        )}
+      </button>
     </div>
   );
 }
