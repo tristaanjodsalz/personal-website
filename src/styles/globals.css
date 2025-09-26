@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+:root {
+  --text-color: #101010;
+  --background-color: #ffffff;
+  --background-color-light: #f5f5f5;
+
+  @media (prefers-color-scheme: dark) {
+    --text-color: #e0e0f0;
+    --background-color: #05050a;
+    --background-color-light: #0e0e15;
+  }
+}
+
 @theme {
   --font-sans:
     var(--font-space_grotesk), ui-sans-serif, system-ui, sans-serif,
@@ -8,7 +20,7 @@
     var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas;
 
-  --color-text: #e0e0f0;
-  --color-background: #05050a;
-  --color-background-light: #0e0e15;
+  --color-text: var(--text-color);
+  --color-background: var(--background-color);
+  --color-background-light: var(--background-color-light);
 }
