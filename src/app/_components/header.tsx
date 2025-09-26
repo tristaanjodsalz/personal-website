@@ -15,6 +15,9 @@ export function Header() {
           <Link href={"/now"}>Projects (/now)</Link>
         </li>
         <li>
+          <Link href={"/stuff"}>Random Stuff</Link>
+        </li>
+        <li>
           <a href="https://cheatsheet.miniwar.de/">
             Cheatsheet{" "}
             <ExternalLink className="mb-0.5 ml-[-0.3rem] inline h-[0.8em] text-current/50" />
