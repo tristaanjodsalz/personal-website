@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <div className="mt-[15vh] mb-[12vh] flex items-center justify-center">
         <div className="ml-4 text-right">
-          <h1 className="mb-0.5 text-right text-4xl">Tristan Jockel</h1>
+          <h1 className="mb-0.5 text-right text-4xl">Tristaan Jodsalz</h1>
           <div className="hidden text-current/60 sm:block">
             <span className="mr-4">
               <MapPin className="mr-[-0.4rem] mb-1 inline h-[0.8em]" /> European
@@ -21,7 +21,7 @@ export default function HomePage() {
         <Image
           src={"/image.png"}
           className="mr-6 h-32 w-32 rounded-full object-cover"
-          alt="Picture of Tristan Jockel"
+          alt="Picture of Tristaan Jodsalz"
           width={256}
           height={128}
           priority

@@ -7,7 +7,7 @@ import { Header } from "./_components/header";
 import { ThemeProvider } from "./_components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Tristan Jockel",
+  title: "Tristaan Jodsalz",
   description: "",
   // icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

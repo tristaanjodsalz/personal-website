@@ -108,7 +108,7 @@ function MainHeader({
   return (
     <div className="flex items-center justify-between p-6 px-[max(calc(50vw-29rem),1rem)] text-text/95">
       <Link href="/" className="font-medium">
-        Tristan Jockel
+        Tristaan Jodsalz
       </Link>
 
       <nav className="hidden sm:block">
