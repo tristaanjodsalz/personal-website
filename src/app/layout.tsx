@@ -8,7 +8,6 @@ import { ThemeProvider } from "./_components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Tristaan Jodsalz",
-  description: "",
   // icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 

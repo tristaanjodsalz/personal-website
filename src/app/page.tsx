@@ -1,7 +1,12 @@
 import { MapPin } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "tristanjockel/components/link";
 import { Text } from "tristanjockel/components/text";
+
+export const metadata: Metadata = {
+  description: "Homepage of Tristaan Jodsalz aka Tristan Jockel",
+};
 
 export default function HomePage() {
   return (
