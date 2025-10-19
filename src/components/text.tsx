@@ -56,7 +56,7 @@ export function H2({
 }: React.ComponentPropsWithoutRef<"h2">) {
   return (
     <h2
-      className={`mt-8 scroll-m-20 border-b border-b-current/20 pb-2 font-semibold text-3xl tracking-tight ${className ?? ""}`}
+      className={`mt-8 mb-1.5 scroll-m-20 border-b border-b-current/20 pb-2 font-semibold text-3xl tracking-tight ${className ?? ""}`}
       {...props}
     >
       {children}
@@ -71,10 +71,40 @@ export function H3({
 }: React.ComponentPropsWithoutRef<"h3">) {
   return (
     <h3
-      className={`mt-4 scroll-m-20 font-semibold text-2xl tracking-tight ${className ?? ""}`}
+      className={`mt-3 scroll-m-20 font-semibold text-2xl tracking-tight ${className ?? ""}`}
       {...props}
     >
       {children}
     </h3>
+  );
+}
+
+export function Code({
+  children,
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"code">) {
+  return (
+    <code
+      className={`my-4 overflow-scroll whitespace-pre text-nowrap rounded bg-background-light px-3 py-3 font-mono text-sm ${className ?? ""} block`}
+      {...props}
+    >
+      {children}
+    </code>
+  );
+}
+
+export function InlineCode({
+  children,
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"code">) {
+  return (
+    <code
+      className={`rounded bg-background-light px-1.5 py-0.5 font-mono text-sm ${className ?? ""}`}
+      {...props}
+    >
+      {children}
+    </code>
   );
 }

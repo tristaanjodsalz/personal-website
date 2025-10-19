@@ -9,7 +9,7 @@ export default async function BlogDashboardPage() {
       <Title className="mb-4">My Blog Posts</Title>
       <ol>
         {posts.map((p) => (
-          <li key={p.slug}>
+          <li key={p.slug} className="mb-4">
             <Link href={`/blog/${p.slug}`}>
               <span className="text-current/60">
                 {new Date(p.date).toLocaleDateString()} -{" "}
