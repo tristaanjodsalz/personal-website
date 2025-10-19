@@ -10,7 +10,7 @@ export const meta = {
 
 export default function HelloWorldPost() {
   return (
-    <div>
+    <>
       <p>
         Hi! This will be my new online presence. What can you expect here?
         <br />
@@ -26,9 +26,8 @@ export default function HelloWorldPost() {
         There may also be other content, so be prepared for{" "}
         <span className="italic">memes</span>:
       </p>
-
       <Image
-        className="my-6 sm:w-96 rounded-md"
+        className="my-6 rounded-md sm:w-96"
         src={"/blog/hello-world/meme.jpg"}
         height={736}
         width={736}
@@ -36,6 +35,6 @@ export default function HelloWorldPost() {
       />
 
       <p>See you in my next post, Tristan :D</p>
-    </div>
+    </>
   );
 }

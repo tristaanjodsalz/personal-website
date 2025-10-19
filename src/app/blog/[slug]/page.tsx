@@ -44,12 +44,14 @@ export default async function BlogPostPage({
   return (
     <main>
       <article>
-        <header className="mb-8">
+        <header className="mb-8" itemScope itemType="https://schema.org/Blog">
           <Title>{meta.title}</Title>
 
-          {meta.description ? <TextMuted>{meta.description}</TextMuted> : null}
+          {meta.description ? (
+            <TextMuted itemProp="abstract">{meta.description}</TextMuted>
+          ) : null}
 
-          <TextExtraMuted className="italic">
+          <TextExtraMuted className="italic" itemProp="datePublished">
             {new Date(meta.date).toLocaleDateString()}
           </TextExtraMuted>
         </header>

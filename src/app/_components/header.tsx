@@ -106,16 +106,16 @@ function MainHeader({
   navLinks: React.ReactNode;
 }) {
   return (
-    <div className="flex items-center justify-between p-6 px-[max(calc(50vw-29rem),1rem)] text-text/95">
+    <nav className="flex items-center justify-between p-6 px-[max(calc(50vw-29rem),1rem)] text-text/95">
       <Link href="/" className="font-medium">
         Tristan Jockel
       </Link>
 
-      <nav className="hidden sm:block">
+      <div className="hidden sm:block">
         <ul className="flex list-none gap-6 p-0 font-medium text-sm">
           {navLinks}
         </ul>
-      </nav>
+      </div>
 
       <button
         className="sm:hidden"
@@ -130,6 +130,6 @@ function MainHeader({
           <MenuIcon className="h-6 text-text/95" />
         )}
       </button>
-    </div>
+    </nav>
   );
 }
