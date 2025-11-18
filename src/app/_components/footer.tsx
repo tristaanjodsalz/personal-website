@@ -8,10 +8,10 @@ export function Footer() {
         <p>
           Source available on{" "}
           <a
-            href="https://github.com/tristaanjodsalz/personal-website"
+            href="https://github.com/tristanjodsalz/personal-website"
             className=" underline"
           >
-            tristaanjodsalz/personal-website
+            tristanjodsalz/personal-website
           </a>
         </p>
       </div>

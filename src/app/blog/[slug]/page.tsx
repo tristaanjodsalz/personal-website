@@ -24,7 +24,7 @@ export async function generateMetadata({
 
   const { meta } = post;
   return {
-    title: `Tristaan Jodsalz - ${meta.title}`,
+    title: `Tristan Jodsalz - ${meta.title}`,
     description: meta.description,
     authors: [{ name: "Tristan Jockel" }],
   } satisfies Metadata;

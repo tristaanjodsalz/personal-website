@@ -5,12 +5,12 @@ import { Title } from "tristanjockel/components/text";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Tristaan Jodsalz - /now: Current Projects",
-    description: "A non exaustive list of things I am working on.",
+    title: "Tristan Jodsalz - Wallpapers",
+    description: "A collection of wallpapers I made.",
   } satisfies Metadata;
 }
 
-export default async function NowPage() {
+export default async function Wallpapers() {
   return (
     <main>
       <Title>Wallpapers</Title>
