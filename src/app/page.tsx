@@ -1,3 +1,8 @@
+import {
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 import { MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -5,7 +10,7 @@ import Link from "tristanjockel/components/link";
 import { Text } from "tristanjockel/components/text";
 
 export const metadata: Metadata = {
-  description: "Homepage of Tristan Jodsalz aka Tristan Jockel",
+  description: "Personal Website of Tristan Jodsalz aka Tristan Jockel",
 };
 
 export default function HomePage() {
@@ -13,7 +18,7 @@ export default function HomePage() {
     <>
       <div className="mt-[15vh] mb-[12vh] flex items-center justify-center">
         <div className="ml-4 text-right">
-          <h1 className="mb-0.5 text-right text-4xl">Tristan Jodsalz</h1>
+          <h1 className="mb-0.5 text-right text-4xl">Tristan Jockel</h1>
           <div className="hidden text-current/60 sm:block">
             <span className="mr-4">
               <MapPin className="mr-[-0.4rem] mb-1 inline h-[0.8em]" /> European
@@ -32,6 +37,7 @@ export default function HomePage() {
           priority
         />
       </div>
+      <Links />
       <div className="flex flex-col justify-center sm:flex-row">
         <Main />
       </div>
@@ -65,5 +71,24 @@ function Main() {
         watched it the first time, I also have become a big fan.
       </Text>
     </main>
+  );
+}
+
+function Links() {
+  return (
+    <div className="mb-12 flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6 [&>a]:block [&>a]:sm:inline-block">
+      <Link href="https://github.com/tristanjodsalz">
+        <GitHubLogoIcon className="mr-2 inline h-5 w-5" />
+        tristanjodsalz
+      </Link>
+      <Link href="https://x.com/tristanjodsalz">
+        <TwitterLogoIcon className="mr-2 inline h-5 w-5" />
+        @tristanjodsalz
+      </Link>
+      <Link href="https://www.instagram.com/tristanjodsalz/">
+        <InstagramLogoIcon className="mr-2 inline h-5 w-5" />
+        tristanjodsalz
+      </Link>
+    </div>
   );
 }
