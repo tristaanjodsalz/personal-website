@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Title } from "tristanjockel/components/text";
 import { getAllPostsMeta } from "tristanjockel/lib/posts";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Tristan Jodsalz - Blog",
+    description: "My blog with all my posts.",
+  } satisfies Metadata;
+}
 
 export default async function BlogDashboardPage() {
   const posts = await getAllPostsMeta();

@@ -10,7 +10,8 @@ import Link from "tristanjockel/components/link";
 import { Text } from "tristanjockel/components/text";
 
 export const metadata: Metadata = {
-  description: "Personal Website of Tristan Jodsalz aka Tristan Jockel",
+  description:
+    "Hi! I'm Tristan Jockel. This is my personal website, where I share a bit about myself, current projects and technology. Owner of AS207792. Fan of open source, Formula 1 and Politics.",
 };
 
 export default function HomePage() {
