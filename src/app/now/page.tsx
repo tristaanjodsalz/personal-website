@@ -17,7 +17,7 @@ export default async function NowPage() {
         <header className="mb-6">
           <Title>What I am working on</Title>
           <Text className="text-current/60 italic">
-            Last updated: {new Date("2025-09-20").toLocaleDateString()}
+            Last updated: {new Date("2026-01-07").toLocaleDateString()}
           </Text>
         </header>
         <Text>
@@ -27,26 +27,42 @@ export default async function NowPage() {
 
         <H2>Software Projects:</H2>
 
-        <H3>Software Modem</H3>
-        <Text>
-          <Link href="https://github.com/Minecrafter5K/software-modem">
-            Software Modem
-          </Link>{" "}
-          is a Rust implementation of an OFDM modulator and demodulator. I am
-          planning on building a phased array transceiver to transmit and
-          receive data with the help of this library.
-        </Text>
-
         <H3>Archivum</H3>
         <Text>
           <Link href="https://github.com/archivum-drive">Archivum Drive</Link>{" "}
           will be a selfhosted, end-to-end encrypted cloud storage solution. It
-          uses CRDTs to sync end-to-end encrypted metadata between clients and
-          stores files fully encrypted on a server.
+          uses CRDTs like events to sync end-to-end encrypted metadata between
+          clients and stores its data in an content addressable, fully encrypted
+          blob store.
+        </Text>
+        <Text>
+          The project is devided into the{" "}
+          <Link href="https://github.com/archivum-drive/archivum-core">
+            core
+          </Link>
+          , which contains the logic and is protable to use with any frontend.
+          Currently there are bindings for{" "}
+          <Link href="https://github.com/archivum-drive/archivum-typescript">
+            Typescript
+          </Link>
+          . With the help of the typescript bindings, I am building a{" "}
+          <Link href="https://archivum-drive.github.io/archivum-frontend-web">
+            web frontend
+          </Link>
+          .
         </Text>
         <Text>
           I have plans to add server-side indexing capabilities with projects
           like Confidential Containers to allow fully private search.
+        </Text>
+
+        <H3>Diarium</H3>
+        <Text>
+          Diarium is still in the planning phase. It will be a selfhosted,
+          end-to-end encrypted diary/journal application with a focus on
+          searchablility and statistics. It will not only store normal text but
+          also things like public transport journeys or checkins at restaurants
+          or hotels.
         </Text>
 
         <H2>Other Projects:</H2>
@@ -67,6 +83,10 @@ export default async function NowPage() {
         <Text>
           The VPS in Düsseldorf runs a private VPN server for my devices to
           connect to.
+        </Text>
+        <Text>
+          vpsDUS also runs a recursive DNS resolver for internal use. It
+          supports dns64 to use with a jool nat64 instance running on vpsAMS.
         </Text>
       </article>
     </main>

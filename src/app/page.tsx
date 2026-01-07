@@ -11,7 +11,7 @@ import { Text } from "tristanjockel/components/text";
 
 export const metadata: Metadata = {
   description:
-    "Hi! I'm Tristan Jockel. This is my personal website, where I share a bit about myself, current projects and technology. Owner of AS207792. Fan of open source, Formula 1 and Politics.",
+    "Hi! I'm Tristan Jockel. This is my personal website, where I share stuff about myself, current projects and technology. Owner of AS207792. Fan of open source, Formula 1 and Politics.",
 };
 
 export default function HomePage() {
@@ -28,7 +28,7 @@ export default function HomePage() {
             <span>he/him</span>
           </div>
         </div>
-        <span className="m-6 h-32 w-[1px] bg-[#63636340] dark:bg-[#63636380]" />
+        <span className="m-6 h-32 w-px bg-[#63636340] dark:bg-[#63636380]" />
         <Image
           src={"/image.png"}
           className="mr-6 h-32 w-32 rounded-full object-cover"
@@ -52,7 +52,7 @@ function Main() {
       <Text>Hi, I'm Tristan!</Text>
       <Text>
         I am a student from Germany interested in software development,
-        networking and natural sciences.
+        networking and homelabbing.
         <br />
         In my free time I like to code web apps, administer servers, a
         Kubernetes cluster, AS207792, my autonomous system, and, of course,
@@ -64,7 +64,8 @@ function Main() {
       </Text>
       <Text>
         Besides the the <span className="italic">nerd</span> stuff, I also
-        sometimes watch Formula 1 and listen to{" "}
+        sometimes watch Formula 1 (why has Norris won the championship??) and
+        listen to{" "}
         <Link href="https://music.apple.com/de/album/hamilton-an-american-musical-original-broadway-cast/1025210938">
           Hamilton
         </Link>
