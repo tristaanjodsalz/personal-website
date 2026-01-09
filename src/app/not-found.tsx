@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tristan Jodsalz - 404: This page does not exist",
+  title: "Tristan Jockel - 404: This page does not exist",
   description: "The page you are looking for does not exist.",
 };
 

@@ -6,7 +6,7 @@ export const meta = {
   title: "How I use SSH with SSO",
   date: "2025-10-19",
   description:
-    "I have set up step ca to issue SSH certificates to my clients using SSO with keycloak.",
+    "I have set up step ca to issue SSH certificates to my clients using SSO with keycloak so I can use sigle sign-on from all my devices to SSH into my servers.",
 };
 
 export default function SSHWithSSO() {

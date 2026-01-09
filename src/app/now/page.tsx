@@ -4,9 +4,9 @@ import { H2, H3, Text, Title } from "tristanjockel/components/text";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Tristan Jodsalz - /now: Current Projects",
+    title: "Tristan Jockel - /now: Current Projects",
     description:
-      "A list of projects and things am working on. Archivum (an e2ee Drive Solution), AS207792, etc.",
+      "A list of projects and things am working on. archivum-drive (an content addressable, end-to-end encrypted Drive Solution), AS207792, Diarium (a diary app), etc.",
   } satisfies Metadata;
 }
 

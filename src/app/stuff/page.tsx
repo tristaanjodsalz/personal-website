@@ -4,7 +4,7 @@ import { Title } from "tristanjockel/components/text";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Tristan Jodsalz - random stuff",
+    title: "Tristan Jockel - random stuff",
     description: "A collection of random stuff I made or like.",
   } satisfies Metadata;
 }

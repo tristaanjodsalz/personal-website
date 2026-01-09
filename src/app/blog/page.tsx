@@ -5,7 +5,7 @@ import { getAllPostsMeta } from "tristanjockel/lib/posts";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Tristan Jodsalz - Blog",
+    title: "Tristan Jockel - Blog",
     description: "My blog with all my posts.",
   } satisfies Metadata;
 }

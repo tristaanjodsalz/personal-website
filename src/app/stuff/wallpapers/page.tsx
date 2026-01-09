@@ -5,7 +5,7 @@ import { Title } from "tristanjockel/components/text";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Tristan Jodsalz - Wallpapers",
+    title: "Tristan Jockel - Wallpapers",
     description: "A collection of wallpapers I made.",
   } satisfies Metadata;
 }
