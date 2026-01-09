@@ -11,7 +11,7 @@ import { Text } from "tristanjockel/components/text";
 
 export const metadata: Metadata = {
   description:
-    "Hi! I'm Tristan Jockel. This is my personal website, where I share stuff about myself, current projects and technology. Owner of AS207792. Fan of open source, Formula 1 and Politics.",
+    "Hi! I'm Tristan Jockel and this is my personal website. I also go by @tristanjodsalz. Owner of AS207792. Fan of open source, Formula 1 and Politics.",
 };
 
 export default function HomePage() {
